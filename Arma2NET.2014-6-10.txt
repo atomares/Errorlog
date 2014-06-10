@@ -1,0 +1,1052 @@
+06/10/2014 12:04:04 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 12:04:04 Loaded into process arma3server
+06/10/2014 12:04:04 Loading add-ins
+06/10/2014 12:04:04 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 12:04:04 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 12:04:04 Domain                        Name                Version   Publisher           Description
+06/10/2014 12:04:04 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 12:04:04 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 12:04:04 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 12:04:04 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 12:04:04 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 12:04:04 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 12:04:04 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 12:04:04 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 12:04:04 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 12:04:04 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 12:04:04 Arma2NET initialized in 00:00:00.0422985
+06/10/2014 12:04:04 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 12:04:04 maxResultSize: 10239
+06/10/2014 12:04:04 Result size: 4
+06/10/2014 12:04:04 Result: [[]]
+06/10/2014 12:04:04 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 12:04:04 maxResultSize: 10239
+06/10/2014 12:04:04 Result size: 4
+06/10/2014 12:04:04 Result: [[]]
+06/10/2014 12:04:04 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 12:04:04 maxResultSize: 10239
+06/10/2014 12:04:04 Result size: 75
+06/10/2014 12:04:04 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 12:04:48 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:04:48 maxResultSize: 10239
+06/10/2014 12:04:48 Result size: 0
+06/10/2014 12:04:48 Result: <null>
+06/10/2014 12:04:51 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:04:51 maxResultSize: 10239
+06/10/2014 12:04:51 Result size: 575
+06/10/2014 12:04:51 Result: [[["76561198019374443", "John McKenzie", "0", "7231245", "3", "5", """[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]""", "7", """[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]""", "False"]]]
+06/10/2014 12:05:26 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='0', bankacc='7231245', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:05:26 maxResultSize: 10239
+06/10/2014 12:05:26 Result size: 0
+06/10/2014 12:05:26 Result: <null>
+06/10/2014 12:05:27 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='0', bankacc='7231245', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:05:27 maxResultSize: 10239
+06/10/2014 12:05:27 Result size: 4
+06/10/2014 12:05:27 Result: [[]]
+06/10/2014 12:07:06 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:07:06 maxResultSize: 10239
+06/10/2014 12:07:06 Result size: 0
+06/10/2014 12:07:06 Result: <null>
+06/10/2014 12:07:06 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:07:06 maxResultSize: 10239
+06/10/2014 12:07:06 Result size: 581
+06/10/2014 12:07:06 Result: [[["76561198019374443", "John McKenzie", "5000000", "7231245", "3", "5", """[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]""", "7", """[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]""", "False"]]]
+06/10/2014 12:07:22 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4995000', bankacc='7231245', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:07:22 maxResultSize: 10239
+06/10/2014 12:07:22 Result size: 0
+06/10/2014 12:07:22 Result: <null>
+06/10/2014 12:07:23 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4995000', bankacc='7231245', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:07:23 maxResultSize: 10239
+06/10/2014 12:07:23 Result size: 4
+06/10/2014 12:07:23 Result: [[]]
+06/10/2014 12:11:30 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7231595', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:11:30 maxResultSize: 10239
+06/10/2014 12:11:30 Result size: 0
+06/10/2014 12:11:30 Result: <null>
+06/10/2014 12:11:30 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7231595', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:11:30 maxResultSize: 10239
+06/10/2014 12:11:30 Result size: 4
+06/10/2014 12:11:30 Result: [[]]
+06/10/2014 12:15:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:15:09 maxResultSize: 10239
+06/10/2014 12:15:09 Result size: 0
+06/10/2014 12:15:09 Result: <null>
+06/10/2014 12:15:10 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 12:15:10 maxResultSize: 10239
+06/10/2014 12:15:10 Result size: 4
+06/10/2014 12:15:10 Result: [[]]
+06/10/2014 12:19:08 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:19:08 maxResultSize: 10239
+06/10/2014 12:19:08 Result size: 0
+06/10/2014 12:19:08 Result: <null>
+06/10/2014 12:19:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:19:09 maxResultSize: 10239
+06/10/2014 12:19:09 Result size: 699
+06/10/2014 12:19:09 Result: [[["76561198019374443", "John McKenzie", "4990000", "7232445", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"""]]]
+06/10/2014 12:19:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:19:09 maxResultSize: 10239
+06/10/2014 12:19:09 Result size: 0
+06/10/2014 12:19:09 Result: <null>
+06/10/2014 12:19:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:19:09 maxResultSize: 10239
+06/10/2014 12:19:09 Result size: 63
+06/10/2014 12:19:09 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 12:21:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:21:16 maxResultSize: 10239
+06/10/2014 12:21:16 Result size: 0
+06/10/2014 12:21:16 Result: <null>
+06/10/2014 12:21:17 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:21:17 maxResultSize: 10239
+06/10/2014 12:21:17 Result size: 4
+06/10/2014 12:21:17 Result: [[]]
+06/10/2014 12:27:25 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 12:27:25 Loaded into process arma3server
+06/10/2014 12:27:25 Loading add-ins
+06/10/2014 12:27:25 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 12:27:25 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 12:27:25 Domain                        Name                Version   Publisher           Description
+06/10/2014 12:27:25 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 12:27:25 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 12:27:25 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 12:27:25 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 12:27:25 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 12:27:25 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 12:27:25 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 12:27:25 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 12:27:25 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 12:27:25 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 12:27:25 Arma2NET initialized in 00:00:00.0451943
+06/10/2014 12:27:25 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 12:27:25 maxResultSize: 10239
+06/10/2014 12:27:25 Result size: 4
+06/10/2014 12:27:25 Result: [[]]
+06/10/2014 12:27:25 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 12:27:25 maxResultSize: 10239
+06/10/2014 12:27:25 Result size: 4
+06/10/2014 12:27:25 Result: [[]]
+06/10/2014 12:27:26 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 12:27:26 maxResultSize: 10239
+06/10/2014 12:27:26 Result size: 75
+06/10/2014 12:27:26 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 12:28:06 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:28:06 maxResultSize: 10239
+06/10/2014 12:28:06 Result size: 0
+06/10/2014 12:28:06 Result: <null>
+06/10/2014 12:29:06 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:29:06 maxResultSize: 10239
+06/10/2014 12:29:06 Result size: 699
+06/10/2014 12:29:06 Result: [[["76561198019374443", "John McKenzie", "4990000", "7232445", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"""]]]
+06/10/2014 12:29:07 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:29:07 maxResultSize: 10239
+06/10/2014 12:29:07 Result size: 0
+06/10/2014 12:29:07 Result: <null>
+06/10/2014 12:29:07 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:29:07 maxResultSize: 10239
+06/10/2014 12:29:07 Result size: 63
+06/10/2014 12:29:07 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 12:33:33 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:33:33 maxResultSize: 10239
+06/10/2014 12:33:33 Result size: 0
+06/10/2014 12:33:33 Result: <null>
+06/10/2014 12:33:34 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:33:34 maxResultSize: 10239
+06/10/2014 12:33:34 Result size: 4
+06/10/2014 12:33:34 Result: [[]]
+06/10/2014 12:34:00 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:34:00 maxResultSize: 10239
+06/10/2014 12:34:00 Result size: 0
+06/10/2014 12:34:00 Result: <null>
+06/10/2014 12:34:00 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:34:00 maxResultSize: 10239
+06/10/2014 12:34:00 Result size: 699
+06/10/2014 12:34:00 Result: [[["76561198019374443", "John McKenzie", "4990000", "7232445", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]""", "False", """[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"""]]]
+06/10/2014 12:34:00 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:34:00 maxResultSize: 10239
+06/10/2014 12:34:00 Result size: 0
+06/10/2014 12:34:00 Result: <null>
+06/10/2014 12:34:01 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:34:01 maxResultSize: 10239
+06/10/2014 12:34:01 Result size: 63
+06/10/2014 12:34:01 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 12:35:31 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:35:31 maxResultSize: 10239
+06/10/2014 12:35:31 Result size: 0
+06/10/2014 12:35:31 Result: <null>
+06/10/2014 12:35:31 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:35:31 maxResultSize: 10239
+06/10/2014 12:35:31 Result size: 4
+06/10/2014 12:35:31 Result: [[]]
+06/10/2014 12:42:57 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 12:42:57 Loaded into process arma3server
+06/10/2014 12:42:57 Loading add-ins
+06/10/2014 12:42:57 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 12:42:57 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 12:42:57 Domain                        Name                Version   Publisher           Description
+06/10/2014 12:42:57 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 12:42:57 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 12:42:57 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 12:42:57 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 12:42:57 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 12:42:57 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 12:42:57 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 12:42:57 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 12:42:57 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 12:42:57 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 12:42:57 Arma2NET initialized in 00:00:00.0422602
+06/10/2014 12:42:57 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 12:42:57 maxResultSize: 10239
+06/10/2014 12:42:57 Result size: 4
+06/10/2014 12:42:57 Result: [[]]
+06/10/2014 12:42:57 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 12:42:57 maxResultSize: 10239
+06/10/2014 12:42:57 Result size: 4
+06/10/2014 12:42:57 Result: [[]]
+06/10/2014 12:42:57 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 12:42:57 maxResultSize: 10239
+06/10/2014 12:42:57 Result size: 75
+06/10/2014 12:42:57 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 12:43:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:43:36 maxResultSize: 10239
+06/10/2014 12:43:36 Result size: 0
+06/10/2014 12:43:36 Result: <null>
+06/10/2014 12:44:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:44:36 maxResultSize: 10239
+06/10/2014 12:44:36 Result size: 699
+06/10/2014 12:44:36 Result: [[["76561198019374443", "John McKenzie", "4990000", "7232445", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]""", "False", """[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"""]]]
+06/10/2014 12:44:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:44:36 maxResultSize: 10239
+06/10/2014 12:44:36 Result size: 0
+06/10/2014 12:44:36 Result: <null>
+06/10/2014 12:44:37 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:44:37 maxResultSize: 10239
+06/10/2014 12:44:37 Result size: 63
+06/10/2014 12:44:37 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 12:45:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:45:09 maxResultSize: 10239
+06/10/2014 12:45:09 Result size: 0
+06/10/2014 12:45:09 Result: <null>
+06/10/2014 12:45:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:45:09 maxResultSize: 10239
+06/10/2014 12:45:09 Result size: 4
+06/10/2014 12:45:09 Result: [[]]
+06/10/2014 12:45:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:45:16 maxResultSize: 10239
+06/10/2014 12:45:16 Result size: 0
+06/10/2014 12:45:16 Result: <null>
+06/10/2014 12:45:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4990000', bankacc='7232445', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,0]]"', civ_gear='"[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:45:16 maxResultSize: 10239
+06/10/2014 12:45:16 Result size: 4
+06/10/2014 12:45:16 Result: [[]]
+06/10/2014 12:45:43 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:45:43 maxResultSize: 10239
+06/10/2014 12:45:43 Result size: 0
+06/10/2014 12:45:43 Result: <null>
+06/10/2014 12:45:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 12:45:44 maxResultSize: 10239
+06/10/2014 12:45:44 Result size: 699
+06/10/2014 12:45:44 Result: [[["76561198019374443", "John McKenzie", "4990000", "7232445", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[``,``,``,[],`U_C_Poloshirt_stripped`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],``,``]"""]]]
+06/10/2014 12:45:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:45:44 maxResultSize: 10239
+06/10/2014 12:45:44 Result size: 0
+06/10/2014 12:45:44 Result: <null>
+06/10/2014 12:45:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 12:45:44 maxResultSize: 10239
+06/10/2014 12:45:44 Result size: 63
+06/10/2014 12:45:44 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 12:53:34 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4981925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:53:34 maxResultSize: 10239
+06/10/2014 12:53:34 Result size: 0
+06/10/2014 12:53:34 Result: <null>
+06/10/2014 12:53:34 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4981925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_wiederstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 12:53:34 maxResultSize: 10239
+06/10/2014 12:53:34 Result size: 4
+06/10/2014 12:53:34 Result: [[]]
+06/10/2014 13:13:19 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 13:13:19 Loaded into process arma3server
+06/10/2014 13:13:19 Loading add-ins
+06/10/2014 13:13:19 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 13:13:19 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 13:13:19 Domain                        Name                Version   Publisher           Description
+06/10/2014 13:13:19 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 13:13:19 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 13:13:19 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 13:13:19 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 13:13:19 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 13:13:19 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 13:13:19 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 13:13:19 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 13:13:19 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 13:13:19 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 13:13:19 Arma2NET initialized in 00:00:00.0430723
+06/10/2014 13:13:19 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 13:13:19 maxResultSize: 10239
+06/10/2014 13:13:19 Result size: 4
+06/10/2014 13:13:19 Result: [[]]
+06/10/2014 13:13:19 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 13:13:19 maxResultSize: 10239
+06/10/2014 13:13:19 Result size: 4
+06/10/2014 13:13:19 Result: [[]]
+06/10/2014 13:13:19 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 13:13:19 maxResultSize: 10239
+06/10/2014 13:13:19 Result size: 75
+06/10/2014 13:13:19 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 13:13:46 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 13:13:46 maxResultSize: 10239
+06/10/2014 13:13:46 Result size: 0
+06/10/2014 13:13:46 Result: <null>
+06/10/2014 13:14:46 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 13:14:46 maxResultSize: 10239
+06/10/2014 13:14:46 Result size: 581
+06/10/2014 13:14:46 Result: [[["76561198019374443", "John McKenzie", "4981925", "7232795", "3", "5", """[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]""", "7", """[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]""", "False"]]]
+06/10/2014 13:18:31 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Air'']
+06/10/2014 13:18:31 maxResultSize: 10239
+06/10/2014 13:18:31 Result size: 0
+06/10/2014 13:18:31 Result: <null>
+06/10/2014 13:18:32 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Air'']
+06/10/2014 13:18:32 maxResultSize: 10239
+06/10/2014 13:18:32 Result size: 112
+06/10/2014 13:18:32 Result: [[["24", "cop", "B_Heli_Transport_01_F", "Air", "76561198019374443", "True", "False", "144352", "0", """[]"""]]]
+06/10/2014 13:18:37 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Car'']
+06/10/2014 13:18:37 maxResultSize: 10239
+06/10/2014 13:18:37 Result size: 0
+06/10/2014 13:18:37 Result: <null>
+06/10/2014 13:18:37 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Car'']
+06/10/2014 13:18:37 maxResultSize: 10239
+06/10/2014 13:18:37 Result size: 199
+06/10/2014 13:18:37 Result: [[["57", "cop", "C_SUV_01_F", "Car", "76561198019374443", "True", "False", "9916", "3", """[]"""], ["66", "cop", "B_MRAP_01_F", "Car", "76561198019374443", "True", "False", "597125", "0", """[]"""]]]
+06/10/2014 13:18:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='66' AND pid='76561198019374443'']
+06/10/2014 13:18:41 maxResultSize: 10239
+06/10/2014 13:18:41 Result size: 0
+06/10/2014 13:18:41 Result: <null>
+06/10/2014 13:18:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='66' AND pid='76561198019374443'']
+06/10/2014 13:18:41 maxResultSize: 10239
+06/10/2014 13:18:41 Result size: 102
+06/10/2014 13:18:41 Result: [[["66", "cop", "B_MRAP_01_F", "Car", "76561198019374443", "True", "False", "597125", "0", """[]"""]]]
+06/10/2014 13:18:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='66'']
+06/10/2014 13:18:42 maxResultSize: 10239
+06/10/2014 13:18:42 Result size: 0
+06/10/2014 13:18:42 Result: <null>
+06/10/2014 13:18:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='66'']
+06/10/2014 13:18:42 maxResultSize: 10239
+06/10/2014 13:18:42 Result size: 4
+06/10/2014 13:18:42 Result: [[]]
+06/10/2014 13:19:33 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Car'']
+06/10/2014 13:19:33 maxResultSize: 10239
+06/10/2014 13:19:33 Result size: 0
+06/10/2014 13:19:33 Result: <null>
+06/10/2014 13:19:33 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Car'']
+06/10/2014 13:19:33 maxResultSize: 10239
+06/10/2014 13:19:33 Result size: 99
+06/10/2014 13:19:33 Result: [[["57", "cop", "C_SUV_01_F", "Car", "76561198019374443", "True", "False", "9916", "3", """[]"""]]]
+06/10/2014 13:19:35 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='57' AND pid='76561198019374443'']
+06/10/2014 13:19:35 maxResultSize: 10239
+06/10/2014 13:19:35 Result size: 0
+06/10/2014 13:19:35 Result: <null>
+06/10/2014 13:19:35 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='57' AND pid='76561198019374443'']
+06/10/2014 13:19:35 maxResultSize: 10239
+06/10/2014 13:19:35 Result size: 99
+06/10/2014 13:19:35 Result: [[["57", "cop", "C_SUV_01_F", "Car", "76561198019374443", "True", "False", "9916", "3", """[]"""]]]
+06/10/2014 13:19:35 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='57'']
+06/10/2014 13:19:35 maxResultSize: 10239
+06/10/2014 13:19:35 Result size: 0
+06/10/2014 13:19:35 Result: <null>
+06/10/2014 13:19:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='57'']
+06/10/2014 13:19:36 maxResultSize: 10239
+06/10/2014 13:19:36 Result size: 4
+06/10/2014 13:19:36 Result: [[]]
+06/10/2014 13:20:38 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Air'']
+06/10/2014 13:20:38 maxResultSize: 10239
+06/10/2014 13:20:38 Result size: 0
+06/10/2014 13:20:38 Result: <null>
+06/10/2014 13:20:39 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE pid='76561198019374443' AND alive='1' AND active='0' AND side='cop' AND type='Air'']
+06/10/2014 13:20:39 maxResultSize: 10239
+06/10/2014 13:20:39 Result size: 112
+06/10/2014 13:20:39 Result: [[["24", "cop", "B_Heli_Transport_01_F", "Air", "76561198019374443", "True", "False", "144352", "0", """[]"""]]]
+06/10/2014 13:20:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='24' AND pid='76561198019374443'']
+06/10/2014 13:20:41 maxResultSize: 10239
+06/10/2014 13:20:41 Result size: 0
+06/10/2014 13:20:41 Result: <null>
+06/10/2014 13:20:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT * FROM vehicles WHERE id='24' AND pid='76561198019374443'']
+06/10/2014 13:20:41 maxResultSize: 10239
+06/10/2014 13:20:41 Result size: 112
+06/10/2014 13:20:41 Result: [[["24", "cop", "B_Heli_Transport_01_F", "Air", "76561198019374443", "True", "False", "144352", "0", """[]"""]]]
+06/10/2014 13:20:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='24'']
+06/10/2014 13:20:41 maxResultSize: 10239
+06/10/2014 13:20:41 Result size: 0
+06/10/2014 13:20:41 Result: <null>
+06/10/2014 13:20:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE vehicles SET active='1' WHERE pid='76561198019374443' AND id='24'']
+06/10/2014 13:20:42 maxResultSize: 10239
+06/10/2014 13:20:42 Result size: 4
+06/10/2014 13:20:42 Result: [[]]
+06/10/2014 14:19:03 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 14:19:03 Loaded into process arma3server
+06/10/2014 14:19:03 Loading add-ins
+06/10/2014 14:19:03 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 14:19:03 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 14:19:03 Domain                        Name                Version   Publisher           Description
+06/10/2014 14:19:03 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 14:19:03 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 14:19:03 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 14:19:03 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 14:19:03 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 14:19:03 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 14:19:03 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 14:19:03 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 14:19:03 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 14:19:03 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 14:19:03 Arma2NET initialized in 00:00:00.0421959
+06/10/2014 14:19:04 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 14:19:04 maxResultSize: 10239
+06/10/2014 14:19:04 Result size: 4
+06/10/2014 14:19:04 Result: [[]]
+06/10/2014 14:19:04 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 14:19:04 maxResultSize: 10239
+06/10/2014 14:19:04 Result size: 4
+06/10/2014 14:19:04 Result: [[]]
+06/10/2014 14:19:04 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 14:19:04 maxResultSize: 10239
+06/10/2014 14:19:04 Result size: 75
+06/10/2014 14:19:04 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 14:19:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:19:45 maxResultSize: 10239
+06/10/2014 14:19:45 Result size: 0
+06/10/2014 14:19:45 Result: <null>
+06/10/2014 14:20:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:20:45 maxResultSize: 10239
+06/10/2014 14:20:45 Result size: 874
+06/10/2014 14:20:45 Result: [[["76561198019374443", "John McKenzie", "4981925", "7232795", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 14:20:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:20:45 maxResultSize: 10239
+06/10/2014 14:20:45 Result size: 0
+06/10/2014 14:20:45 Result: <null>
+06/10/2014 14:20:46 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:20:46 maxResultSize: 10239
+06/10/2014 14:20:46 Result size: 63
+06/10/2014 14:20:46 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 14:29:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4981925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:29:44 maxResultSize: 10239
+06/10/2014 14:29:44 Result size: 0
+06/10/2014 14:29:44 Result: <null>
+06/10/2014 14:29:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4981925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:29:44 maxResultSize: 10239
+06/10/2014 14:29:44 Result size: 4
+06/10/2014 14:29:44 Result: [[]]
+06/10/2014 14:30:15 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:30:15 maxResultSize: 10239
+06/10/2014 14:30:15 Result size: 0
+06/10/2014 14:30:15 Result: <null>
+06/10/2014 14:30:15 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:30:15 maxResultSize: 10239
+06/10/2014 14:30:15 Result size: 874
+06/10/2014 14:30:15 Result: [[["76561198019374443", "John McKenzie", "4981925", "7232795", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 14:30:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:30:16 maxResultSize: 10239
+06/10/2014 14:30:16 Result size: 0
+06/10/2014 14:30:16 Result: <null>
+06/10/2014 14:30:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:30:16 maxResultSize: 10239
+06/10/2014 14:30:16 Result size: 63
+06/10/2014 14:30:16 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 14:31:07 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4681925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:31:07 maxResultSize: 10239
+06/10/2014 14:31:07 Result size: 0
+06/10/2014 14:31:07 Result: <null>
+06/10/2014 14:31:07 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4681925', bankacc='7232795', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:31:07 maxResultSize: 10239
+06/10/2014 14:31:07 Result size: 4
+06/10/2014 14:31:07 Result: [[]]
+06/10/2014 14:35:26 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4606925', bankacc='7233145', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:35:26 maxResultSize: 10239
+06/10/2014 14:35:26 Result size: 0
+06/10/2014 14:35:26 Result: <null>
+06/10/2014 14:35:26 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4606925', bankacc='7233145', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:35:26 maxResultSize: 10239
+06/10/2014 14:35:26 Result size: 4
+06/10/2014 14:35:26 Result: [[]]
+06/10/2014 14:39:01 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:39:01 maxResultSize: 10239
+06/10/2014 14:39:01 Result size: 0
+06/10/2014 14:39:01 Result: <null>
+06/10/2014 14:39:01 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:39:01 maxResultSize: 10239
+06/10/2014 14:39:01 Result size: 874
+06/10/2014 14:39:01 Result: [[["76561198019374443", "John McKenzie", "4606925", "7233145", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 14:39:02 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:39:02 maxResultSize: 10239
+06/10/2014 14:39:02 Result size: 0
+06/10/2014 14:39:02 Result: <null>
+06/10/2014 14:39:02 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:39:02 maxResultSize: 10239
+06/10/2014 14:39:02 Result size: 63
+06/10/2014 14:39:02 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 14:41:25 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4531925', bankacc='7233145', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:41:25 maxResultSize: 10239
+06/10/2014 14:41:25 Result size: 0
+06/10/2014 14:41:25 Result: <null>
+06/10/2014 14:41:25 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4531925', bankacc='7233145', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,1],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,0]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 14:41:25 maxResultSize: 10239
+06/10/2014 14:41:25 Result size: 4
+06/10/2014 14:41:25 Result: [[]]
+06/10/2014 14:42:11 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:42:11 maxResultSize: 10239
+06/10/2014 14:42:11 Result size: 0
+06/10/2014 14:42:11 Result: <null>
+06/10/2014 14:42:11 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 14:42:11 maxResultSize: 10239
+06/10/2014 14:42:11 Result size: 874
+06/10/2014 14:42:11 Result: [[["76561198019374443", "John McKenzie", "4531925", "7233145", "3", "5", """[[`license_civ_driver`,0],[`license_civ_air`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,0],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,0],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 14:42:11 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:42:11 maxResultSize: 10239
+06/10/2014 14:42:11 Result size: 0
+06/10/2014 14:42:11 Result: <null>
+06/10/2014 14:42:12 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 14:42:12 maxResultSize: 10239
+06/10/2014 14:42:12 Result size: 63
+06/10/2014 14:42:12 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 14:59:53 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 14:59:53 Loaded into process arma3server
+06/10/2014 14:59:53 Loading add-ins
+06/10/2014 14:59:53 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 14:59:53 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 14:59:53 Domain                        Name                Version   Publisher           Description
+06/10/2014 14:59:53 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 14:59:53 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 14:59:53 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 14:59:53 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 14:59:53 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 14:59:53 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 14:59:53 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 14:59:53 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 14:59:53 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 14:59:53 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 14:59:53 Arma2NET initialized in 00:00:00.0426011
+06/10/2014 14:59:53 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 14:59:53 maxResultSize: 10239
+06/10/2014 14:59:53 Result size: 4
+06/10/2014 14:59:53 Result: [[]]
+06/10/2014 14:59:53 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 14:59:53 maxResultSize: 10239
+06/10/2014 14:59:53 Result size: 4
+06/10/2014 14:59:53 Result: [[]]
+06/10/2014 14:59:53 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 14:59:53 maxResultSize: 10239
+06/10/2014 14:59:53 Result size: 75
+06/10/2014 14:59:53 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 15:00:19 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:00:19 maxResultSize: 10239
+06/10/2014 15:00:19 Result size: 0
+06/10/2014 15:00:19 Result: <null>
+06/10/2014 15:00:58 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:00:58 maxResultSize: 10239
+06/10/2014 15:00:58 Result size: 874
+06/10/2014 15:00:58 Result: [[["76561198019374443", "John McKenzie", "4531925", "7233145", "3", "5", """[[`license_civ_driver`,0],[`license_civ_air`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,0],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,0],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 15:00:59 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:00:59 maxResultSize: 10239
+06/10/2014 15:00:59 Result size: 0
+06/10/2014 15:00:59 Result: <null>
+06/10/2014 15:00:59 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:00:59 maxResultSize: 10239
+06/10/2014 15:00:59 Result size: 63
+06/10/2014 15:00:59 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 15:29:15 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 15:29:15 Loaded into process arma3server
+06/10/2014 15:29:15 Loading add-ins
+06/10/2014 15:29:15 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 15:29:15 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 15:29:15 Domain                        Name                Version   Publisher           Description
+06/10/2014 15:29:15 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 15:29:15 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 15:29:15 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 15:29:15 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 15:29:15 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 15:29:15 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 15:29:15 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 15:29:15 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 15:29:15 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 15:29:15 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 15:29:15 Arma2NET initialized in 00:00:00.0425103
+06/10/2014 15:29:15 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 15:29:15 maxResultSize: 10239
+06/10/2014 15:29:15 Result size: 4
+06/10/2014 15:29:15 Result: [[]]
+06/10/2014 15:29:15 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 15:29:15 maxResultSize: 10239
+06/10/2014 15:29:15 Result size: 4
+06/10/2014 15:29:15 Result: [[]]
+06/10/2014 15:29:15 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 15:29:15 maxResultSize: 10239
+06/10/2014 15:29:15 Result size: 75
+06/10/2014 15:29:15 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 15:29:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:29:42 maxResultSize: 10239
+06/10/2014 15:29:42 Result size: 0
+06/10/2014 15:29:42 Result: <null>
+06/10/2014 15:30:12 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:30:12 maxResultSize: 10239
+06/10/2014 15:30:12 Result size: 874
+06/10/2014 15:30:12 Result: [[["76561198019374443", "John McKenzie", "4531925", "7233145", "3", "5", """[[`license_civ_driver`,0],[`license_civ_air`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,0],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,0],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 15:30:12 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:30:12 maxResultSize: 10239
+06/10/2014 15:30:12 Result size: 0
+06/10/2014 15:30:12 Result: <null>
+06/10/2014 15:30:13 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:30:13 maxResultSize: 10239
+06/10/2014 15:30:13 Result size: 63
+06/10/2014 15:30:13 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 15:38:52 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4485425', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:38:52 maxResultSize: 10239
+06/10/2014 15:38:52 Result size: 0
+06/10/2014 15:38:52 Result: <null>
+06/10/2014 15:38:52 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4485425', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:38:52 maxResultSize: 10239
+06/10/2014 15:38:52 Result size: 4
+06/10/2014 15:38:52 Result: [[]]
+06/10/2014 15:38:53 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4485425', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:38:53 maxResultSize: 10239
+06/10/2014 15:38:53 Result size: 0
+06/10/2014 15:38:53 Result: <null>
+06/10/2014 15:38:53 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4485425', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:38:53 maxResultSize: 10239
+06/10/2014 15:38:53 Result size: 4
+06/10/2014 15:38:53 Result: [[]]
+06/10/2014 15:39:18 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:39:18 maxResultSize: 10239
+06/10/2014 15:39:18 Result size: 0
+06/10/2014 15:39:18 Result: <null>
+06/10/2014 15:39:18 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 15:39:18 maxResultSize: 10239
+06/10/2014 15:39:18 Result size: 874
+06/10/2014 15:39:18 Result: [[["76561198019374443", "John McKenzie", "4485425", "7233495", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,0],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]""", "False", """[`hgun_PDW2000_F`,``,`hgun_ACPC2_F`,[`30Rnd_9x21_Mag`,`9Rnd_45ACP_Mag`],`U_C_Poloshirt_stripped`,`V_Rangemaster_belt`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,``,`optic_ACO_grn_smg`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],``,``]"""]]]
+06/10/2014 15:39:18 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:39:18 maxResultSize: 10239
+06/10/2014 15:39:18 Result size: 0
+06/10/2014 15:39:18 Result: <null>
+06/10/2014 15:39:19 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 15:39:19 maxResultSize: 10239
+06/10/2014 15:39:19 Result size: 63
+06/10/2014 15:39:19 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 15:42:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4279375', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:42:45 maxResultSize: 10239
+06/10/2014 15:42:45 Result size: 0
+06/10/2014 15:42:45 Result: <null>
+06/10/2014 15:42:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='4279375', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:42:45 maxResultSize: 10239
+06/10/2014 15:42:45 Result size: 4
+06/10/2014 15:42:45 Result: [[]]
+06/10/2014 15:43:20 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3529375', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:43:20 maxResultSize: 10239
+06/10/2014 15:43:20 Result size: 0
+06/10/2014 15:43:20 Result: <null>
+06/10/2014 15:43:21 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3529375', bankacc='7233495', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:43:21 maxResultSize: 10239
+06/10/2014 15:43:21 Result size: 4
+06/10/2014 15:43:21 Result: [[]]
+06/10/2014 15:45:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3514375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:45:36 maxResultSize: 10239
+06/10/2014 15:45:36 Result size: 0
+06/10/2014 15:45:36 Result: <null>
+06/10/2014 15:45:36 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3514375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:45:36 maxResultSize: 10239
+06/10/2014 15:45:36 Result size: 4
+06/10/2014 15:45:36 Result: [[]]
+06/10/2014 15:46:29 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3364375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:46:29 maxResultSize: 10239
+06/10/2014 15:46:29 Result size: 0
+06/10/2014 15:46:29 Result: <null>
+06/10/2014 15:46:29 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3364375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:46:29 maxResultSize: 10239
+06/10/2014 15:46:29 Result size: 4
+06/10/2014 15:46:29 Result: [[]]
+06/10/2014 15:47:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:47:42 maxResultSize: 10239
+06/10/2014 15:47:42 Result size: 0
+06/10/2014 15:47:42 Result: <null>
+06/10/2014 15:47:42 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039375', bankacc='7233845', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:47:42 maxResultSize: 10239
+06/10/2014 15:47:42 Result size: 4
+06/10/2014 15:47:42 Result: [[]]
+06/10/2014 15:52:21 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039375', bankacc='7234195', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:52:21 maxResultSize: 10239
+06/10/2014 15:52:21 Result size: 0
+06/10/2014 15:52:21 Result: <null>
+06/10/2014 15:52:21 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039375', bankacc='7234195', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 15:52:21 maxResultSize: 10239
+06/10/2014 15:52:21 Result size: 4
+06/10/2014 15:52:21 Result: [[]]
+06/10/2014 16:08:35 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 16:08:35 Loaded into process arma3server
+06/10/2014 16:08:35 Loading add-ins
+06/10/2014 16:08:35 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 16:08:35 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 16:08:35 Domain                        Name                Version   Publisher           Description
+06/10/2014 16:08:35 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 16:08:35 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 16:08:35 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 16:08:35 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 16:08:35 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 16:08:35 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 16:08:35 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 16:08:35 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 16:08:35 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 16:08:35 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 16:08:35 Arma2NET initialized in 00:00:00.0422679
+06/10/2014 16:08:35 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 16:08:35 maxResultSize: 10239
+06/10/2014 16:08:35 Result size: 4
+06/10/2014 16:08:35 Result: [[]]
+06/10/2014 16:08:35 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 16:08:35 maxResultSize: 10239
+06/10/2014 16:08:35 Result size: 4
+06/10/2014 16:08:35 Result: [[]]
+06/10/2014 16:08:35 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 16:08:35 maxResultSize: 10239
+06/10/2014 16:08:35 Result size: 75
+06/10/2014 16:08:35 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 16:09:18 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 16:09:18 maxResultSize: 10239
+06/10/2014 16:09:18 Result size: 0
+06/10/2014 16:09:18 Result: <null>
+06/10/2014 16:09:22 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 16:09:22 maxResultSize: 10239
+06/10/2014 16:09:22 Result size: 1088
+06/10/2014 16:09:22 Result: [[["76561198019374443", "John McKenzie", "3039375", "7234195", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]""", "False", """[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"""]]]
+06/10/2014 16:09:22 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 16:09:22 maxResultSize: 10239
+06/10/2014 16:09:22 Result size: 0
+06/10/2014 16:09:22 Result: <null>
+06/10/2014 16:09:23 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 16:09:23 maxResultSize: 10239
+06/10/2014 16:09:23 Result size: 63
+06/10/2014 16:09:23 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 16:19:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 16:19:16 maxResultSize: 10239
+06/10/2014 16:19:16 Result size: 0
+06/10/2014 16:19:16 Result: <null>
+06/10/2014 16:19:17 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 16:19:17 maxResultSize: 10239
+06/10/2014 16:19:17 Result size: 4
+06/10/2014 16:19:17 Result: [[]]
+06/10/2014 17:24:42 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 17:24:42 Loaded into process arma3server
+06/10/2014 17:24:42 Loading add-ins
+06/10/2014 17:24:42 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 17:24:42 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 17:24:42 Domain                        Name                Version   Publisher           Description
+06/10/2014 17:24:42 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 17:24:42 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 17:24:42 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 17:24:42 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 17:24:42 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 17:24:42 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 17:24:42 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 17:24:42 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 17:24:42 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 17:24:42 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 17:24:42 Arma2NET initialized in 00:00:00.0425624
+06/10/2014 17:24:43 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 17:24:43 maxResultSize: 10239
+06/10/2014 17:24:43 Result size: 4
+06/10/2014 17:24:43 Result: [[]]
+06/10/2014 17:24:43 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 17:24:43 maxResultSize: 10239
+06/10/2014 17:24:43 Result size: 4
+06/10/2014 17:24:43 Result: [[]]
+06/10/2014 17:24:43 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 17:24:43 maxResultSize: 10239
+06/10/2014 17:24:43 Result size: 75
+06/10/2014 17:24:43 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 17:25:26 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:25:26 maxResultSize: 10239
+06/10/2014 17:25:26 Result size: 0
+06/10/2014 17:25:26 Result: <null>
+06/10/2014 17:25:28 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:25:28 maxResultSize: 10239
+06/10/2014 17:25:28 Result size: 1079
+06/10/2014 17:25:28 Result: [[["76561198019374443", "John McKenzie", "3039275", "7234545", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1]]""", "False", """[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"""]]]
+06/10/2014 17:25:28 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:25:28 maxResultSize: 10239
+06/10/2014 17:25:28 Result size: 0
+06/10/2014 17:25:28 Result: <null>
+06/10/2014 17:25:29 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:25:29 maxResultSize: 10239
+06/10/2014 17:25:29 Result size: 63
+06/10/2014 17:25:29 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 17:25:44 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:25:44 maxResultSize: 10239
+06/10/2014 17:25:44 Result size: 0
+06/10/2014 17:25:44 Result: <null>
+06/10/2014 17:25:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,1],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:25:45 maxResultSize: 10239
+06/10/2014 17:25:45 Result size: 4
+06/10/2014 17:25:45 Result: [[]]
+06/10/2014 17:26:19 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:26:19 maxResultSize: 10239
+06/10/2014 17:26:19 Result size: 0
+06/10/2014 17:26:19 Result: <null>
+06/10/2014 17:26:19 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:26:19 maxResultSize: 10239
+06/10/2014 17:26:19 Result size: 1102
+06/10/2014 17:26:19 Result: [[["76561198019374443", "John McKenzie", "3039275", "7234545", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]""", "False", """[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"""]]]
+06/10/2014 17:26:20 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:26:20 maxResultSize: 10239
+06/10/2014 17:26:20 Result size: 0
+06/10/2014 17:26:20 Result: <null>
+06/10/2014 17:26:20 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:26:20 maxResultSize: 10239
+06/10/2014 17:26:20 Result size: 63
+06/10/2014 17:26:20 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 17:26:45 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:26:45 maxResultSize: 10239
+06/10/2014 17:26:45 Result size: 0
+06/10/2014 17:26:45 Result: <null>
+06/10/2014 17:26:46 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:26:46 maxResultSize: 10239
+06/10/2014 17:26:46 Result size: 4
+06/10/2014 17:26:46 Result: [[]]
+06/10/2014 17:27:05 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:27:05 maxResultSize: 10239
+06/10/2014 17:27:05 Result size: 0
+06/10/2014 17:27:05 Result: <null>
+06/10/2014 17:27:06 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:27:06 maxResultSize: 10239
+06/10/2014 17:27:06 Result size: 581
+06/10/2014 17:27:06 Result: [[["76561198019374443", "John McKenzie", "3039275", "7234545", "3", "5", """[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]""", "7", """[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]""", "False"]]]
+06/10/2014 17:27:12 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:27:12 maxResultSize: 10239
+06/10/2014 17:27:12 Result size: 0
+06/10/2014 17:27:12 Result: <null>
+06/10/2014 17:27:12 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:27:12 maxResultSize: 10239
+06/10/2014 17:27:12 Result size: 4
+06/10/2014 17:27:12 Result: [[]]
+06/10/2014 17:35:05 Arma2NET 2.3.0.0 running on CLR 4.0.30319.18444
+06/10/2014 17:35:05 Loaded into process arma3server
+06/10/2014 17:35:05 Loading add-ins
+06/10/2014 17:35:05 Caught exception of type System.Reflection.TargetInvocationException while loading add-in DefaultDomain
+06/10/2014 17:35:05 System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.IO.FileLoadException: Die Datei oder Assembly "System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" oder eine Abhängigkeit davon wurde nicht gefunden. Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019) ---> System.IO.FileLoadException: Es wird versucht, eine nicht überprüfbare ausführbare Datei mit Fixups zu laden (IAT mit mehr als 2 Abschnitten oder ein TLS-Abschnitt). (Ausnahme von HRESULT: 0x80131019)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Reflection.RuntimeAssembly.nLoadImage(Byte[] rawAssembly, Byte[] rawSymbolStore, Evidence evidence, StackCrawlMark& stackMark, Boolean fIntrospection, SecurityContextSource securityContextSource)
+   bei System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   bei Arma2Net.Managed.AddInManager.DomainLoadAddIn(String assemblyFile)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Delegate.DynamicInvokeImpl(Object[] args)
+   bei Arma2Net.Managed.AddInManager.DomainDoCallback()
+   bei System.AppDomain.DoCallBack(CrossAppDomainDelegate callBackDelegate)
+   bei Arma2Net.Managed.AddInManager.DoCallbackImpl(AppDomain domain, Delegate func, Object arg)
+   bei Arma2Net.Managed.AddInManager.DoCallbackWithResult[T,TResult](AppDomain domain, Func`2 func, T arg)
+   bei Arma2Net.Managed.AddInManager.LoadAddIn(String assemblyFile)
+06/10/2014 17:35:05 Domain                        Name                Version   Publisher           Description
+06/10/2014 17:35:05 DefaultDomain                 Arma2NETMySQL       0.1.0.0   firefly2442         Runs MySQL procedure commands.
+06/10/2014 17:35:05 DefaultDomain                 Arma2NETMySQLCommand0.1.0.0   firefly2442         Runs raw MySQL/SQLite commands
+06/10/2014 17:35:05 DefaultDomain                 Arma2NETMySQLCommandAsync0.1.0.0   firefly2442         Runs asynchronous raw MySQL/SQLite commands
+06/10/2014 17:35:05 DefaultDomain                 ClrVersion          2.0.0.0   Scott_NZ            Retrieves the version of the Common Language Runtime.
+06/10/2014 17:35:05 DefaultDomain                 CompareVersion      2.0.0.0   Scott_NZ            Compares two version strings and returns an integer indicating how they compare.
+06/10/2014 17:35:05 DefaultDomain                 Version             2.0.0.0   Scott_NZ            Returns the version of Arma2NET.
+06/10/2014 17:35:05 DefaultDomain                 GetClipboardText    1.0.0.0   Scott_NZ            Gets the clipboard text value.
+06/10/2014 17:35:05 DefaultDomain                 SetClipboardText    1.0.0.0   Scott_NZ            Sets the clipboard to a text value.
+06/10/2014 17:35:05 DefaultDomain                 CommandLine         2.0.0.0   Scott_NZ            Returns the command line used to start the application.
+06/10/2014 17:35:05 DefaultDomain                 DateTime            2.0.0.0   Scott_NZ            Returns the current date and time.
+06/10/2014 17:35:05 Arma2NET initialized in 00:00:00.0423012
+06/10/2014 17:35:05 function: Arma2NETMySQLCommand ['arma3life', 'CALL resetLifeVehicles();']
+06/10/2014 17:35:05 maxResultSize: 10239
+06/10/2014 17:35:05 Result size: 4
+06/10/2014 17:35:05 Result: [[]]
+06/10/2014 17:35:05 function: Arma2NETMySQLCommand ['arma3life', 'CALL deleteDeadVehicles();']
+06/10/2014 17:35:05 maxResultSize: 10239
+06/10/2014 17:35:05 Result size: 4
+06/10/2014 17:35:05 Result: [[]]
+06/10/2014 17:35:05 function: Arma2NETMySQLCommand ['arma3life', 'SELECT gangs.gangname, gangs.atmCash, gang_players.playerid, gangs.locked, players.name FROM gangs LEFT JOIN gang_players on gang_players.gangid = gangs.id LEFT JOIN players on gang_players.playerid = players.playerid WHERE gang_players.rank='7'']
+06/10/2014 17:35:05 maxResultSize: 10239
+06/10/2014 17:35:05 Result size: 75
+06/10/2014 17:35:05 Result: [[["Mannschaftsheim", "0", "76561198019374443", "false", "John McKenzie"]]]
+06/10/2014 17:35:46 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:35:46 maxResultSize: 10239
+06/10/2014 17:35:46 Result size: 0
+06/10/2014 17:35:46 Result: <null>
+06/10/2014 17:36:02 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:36:02 maxResultSize: 10239
+06/10/2014 17:36:02 Result size: 581
+06/10/2014 17:36:02 Result: [[["76561198019374443", "John McKenzie", "3039275", "7234545", "3", "5", """[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]""", "7", """[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]""", "False"]]]
+06/10/2014 17:36:08 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:36:08 maxResultSize: 10239
+06/10/2014 17:36:08 Result size: 0
+06/10/2014 17:36:08 Result: <null>
+06/10/2014 17:36:09 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:36:09 maxResultSize: 10239
+06/10/2014 17:36:09 Result size: 4
+06/10/2014 17:36:09 Result: [[]]
+06/10/2014 17:36:40 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:36:40 maxResultSize: 10239
+06/10/2014 17:36:40 Result size: 0
+06/10/2014 17:36:40 Result: <null>
+06/10/2014 17:36:41 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='3039275', bankacc='7234545', cop_gear='"[`arifle_MXC_F`,`hgun_P07_snds_F`,[`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],`U_Rangemaster`,`V_PlateCarrier2_rgr`,``,[`ItemMap`,`ItemCompass`,`G_Combat`,`H_MilCap_mcamo`],[``,``,`optic_Arco`],[],[`muzzle_snds_L`,``,``],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`FirstAidKit`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[]]"', cop_licenses='"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,0]]"' WHERE playerid='76561198019374443'']
+06/10/2014 17:36:41 maxResultSize: 10239
+06/10/2014 17:36:41 Result size: 4
+06/10/2014 17:36:41 Result: [[]]
+06/10/2014 17:37:02 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:37:02 maxResultSize: 10239
+06/10/2014 17:37:02 Result size: 0
+06/10/2014 17:37:02 Result: <null>
+06/10/2014 17:37:02 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='76561198019374443'']
+06/10/2014 17:37:02 maxResultSize: 10239
+06/10/2014 17:37:02 Result size: 1102
+06/10/2014 17:37:02 Result: [[["76561198019374443", "John McKenzie", "3039275", "7234545", "3", "5", """[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,0]]""", "False", """[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"""]]]
+06/10/2014 17:37:03 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:37:03 maxResultSize: 10239
+06/10/2014 17:37:03 Result size: 0
+06/10/2014 17:37:03 Result: <null>
+06/10/2014 17:37:03 function: Arma2NETMySQLCommandAsync ['arma3life', 'SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='76561198019374443'']
+06/10/2014 17:37:03 maxResultSize: 10239
+06/10/2014 17:37:03 Result size: 63
+06/10/2014 17:37:03 Result: [[["76561198019374443", "3", "Mannschaftsheim", "false", "7"]]]
+06/10/2014 17:39:24 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2939275', bankacc='5734545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:39:24 maxResultSize: 10239
+06/10/2014 17:39:24 Result size: 0
+06/10/2014 17:39:24 Result: <null>
+06/10/2014 17:39:25 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2939275', bankacc='5734545', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:39:25 maxResultSize: 10239
+06/10/2014 17:39:25 Result size: 4
+06/10/2014 17:39:25 Result: [[]]
+06/10/2014 17:42:21 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:42:21 maxResultSize: 10239
+06/10/2014 17:42:21 Result size: 0
+06/10/2014 17:42:21 Result: <null>
+06/10/2014 17:42:21 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:42:21 maxResultSize: 10239
+06/10/2014 17:42:21 Result size: 4
+06/10/2014 17:42:21 Result: [[]]
+06/10/2014 17:42:43 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:42:43 maxResultSize: 10239
+06/10/2014 17:42:43 Result size: 0
+06/10/2014 17:42:43 Result: <null>
+06/10/2014 17:42:43 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:42:43 maxResultSize: 10239
+06/10/2014 17:42:43 Result size: 4
+06/10/2014 17:42:43 Result: [[]]
+06/10/2014 17:44:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:44:16 maxResultSize: 10239
+06/10/2014 17:44:16 Result size: 0
+06/10/2014 17:44:16 Result: <null>
+06/10/2014 17:44:16 function: Arma2NETMySQLCommandAsync ['arma3life', 'UPDATE players SET name='John McKenzie', cash='2589275', bankacc='5734895', civ_licenses='"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,0],[`license_civ_rebel`,1],[`license_civ_coke`,0],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_widerstand`,0],[`license_civ_grundausbildung`,1],[`license_civ_home`,1]]"', civ_gear='"[`srifle_DMR_01_F`,``,`hgun_ACPC2_F`,[`10Rnd_762x51_Mag`,`9Rnd_45ACP_Mag`],`U_IG_Guerilla1_1`,`V_TacVest_khk`,`B_Carryall_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],[``,`acc_flashlight`,`optic_Hamr`],[],[``,``,``],[`9Rnd_45ACP_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[`V_HarnessO_brn`,`30Rnd_9x21_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`],`H_Shemag_olive`,``]"', arrested='0' WHERE playerid='76561198019374443'']
+06/10/2014 17:44:16 maxResultSize: 10239
+06/10/2014 17:44:16 Result size: 4
+06/10/2014 17:44:16 Result: [[]]
